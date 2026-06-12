@@ -1,6 +1,6 @@
 cask "spark-plug" do
   version "1.1.0"
-  sha256 "a3156c4ba2a263f1fd208ce232eee6bc41bc39187c9575a4f00450565fce4487"
+  sha256 "59d31719162b65d3af05578995ab0e36798cb3098accfcf65342c8173454b195"
 
   url "https://github.com/kylescudder/spark-plug/releases/download/v#{version}/SparkPlug-#{version}.zip"
   name "Spark Plug"
@@ -22,5 +22,5 @@ cask "spark-plug" do
                    sudo: false
   end
 
-  zap trash: "~/Library/Preferences/com.kylescudder.SparkPlug.plist"
+  zap trash: "~/Library/Preferences/co.uk.kylescudder.spark-plug.plist"
 end
