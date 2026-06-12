@@ -1,0 +1,31 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  audit:
+    runs-on: macos-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@main
+
+      # Homebrew refuses to lint/audit casks that aren't inside a registered
+      # tap, so symlink this checkout into the Taps directory first.
+      - name: Register checkout as a tap
+        run: |
+          TAP_DIR="$(brew --repository)/Library/Taps/kylescudder/homebrew-tap"
+          mkdir -p "$(dirname "$TAP_DIR")"
+          ln -sf "$PWD" "$TAP_DIR"
+
+      - name: brew style
+        run: brew style kylescudder/tap
+
+      - name: brew audit
+        run: brew audit --cask --online kylescudder/tap/spark-plug
