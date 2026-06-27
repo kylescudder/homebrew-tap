@@ -1,6 +1,6 @@
 cask "lgtm" do
-  version "0.0.0"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  version "0.1.0"
+  sha256 "29b9aa8bef277b60e819f6bad22f9e4ff3ec96afcb552184dae99f94a2679e29"
 
   url "https://github.com/kylescudder/lgtm/releases/download/v#{version}/lgtm-#{version}-macos.zip"
   name "LGTM"
