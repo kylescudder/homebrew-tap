@@ -1,6 +1,6 @@
 cask "spark-plug" do
-  version "1.6.0"
-  sha256 "88b7708a17787749d33e83a3a239b1506e5034e5d07bf6e95f2477d6b5dcfb51"
+  version "1.6.1"
+  sha256 "1b9f0a6168e9b25ace529edff38074282b1b0016f2fddfec7e30f817597c9b3b"
 
   url "https://github.com/kylescudder/spark-plug/releases/download/v#{version}/SparkPlug-#{version}.zip"
   name "Spark Plug"
