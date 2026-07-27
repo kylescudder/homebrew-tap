@@ -9,7 +9,7 @@ brew tap kylescudder/tap
 | Cask | Description |
 | --- | --- |
 | `balm` | Native, keyboard-driven SwiftUI client for Jira Cloud |
-| `spark-plug` | Menubar launcher for Claude Code sessions in your worktrees |
+| `spark-plug` | Menubar launcher for coding-agent sessions in your worktrees |
 
 ```sh
 brew install --cask balm
