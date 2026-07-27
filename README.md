@@ -19,3 +19,13 @@ brew install --cask herdr
 brew install --cask lgtm
 brew install --cask spark-plug
 ```
+
+## Formulae
+
+| Formula | Description |
+| --- | --- |
+| `schmerdr` | Template-driven workspace launcher for herdr (shell tool — `source` it after install; see caveats) |
+
+```sh
+brew install kylescudder/tap/schmerdr
+```
