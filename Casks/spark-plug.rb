@@ -4,7 +4,7 @@ cask "spark-plug" do
 
   url "https://github.com/kylescudder/spark-plug/releases/download/v#{version}/SparkPlug-#{version}.zip"
   name "Spark Plug"
-  desc "Menubar launcher for Claude Code sessions in your worktrees"
+  desc "Menubar launcher for coding-agent sessions in your worktrees"
   homepage "https://github.com/kylescudder/spark-plug"
 
   livecheck do
