@@ -1,8 +1,8 @@
 class Schmerdr < Formula
   desc "Template-driven workspace launcher for herdr"
   homepage "https://github.com/kylescudder/schmerdr"
-  url "https://github.com/kylescudder/schmerdr/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "68e9798e3e37de4812f21637e5e6de73750af537de41250ce691eace134836dc"
+  url "https://github.com/kylescudder/schmerdr/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "4de8e346df635137a352a5670a7561ece56fe9255275bf89f80910dfb05a7552"
   license "MIT"
 
   depends_on "jq"
