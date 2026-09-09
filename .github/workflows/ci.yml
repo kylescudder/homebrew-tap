@@ -25,7 +25,9 @@ jobs:
           ln -sf "$PWD" "$TAP_DIR"
 
       - name: brew style
-        run: brew style kylescudder/tap
+        # Skip Cask/InstallSteps: these casks intentionally use a postflight xattr
+        # step to de-quarantine their unsigned binaries, which that cop forbids.
+        run: brew style kylescudder/tap --except-cops Cask/InstallSteps
 
       - name: brew audit
         run: brew audit --cask --online kylescudder/tap/spark-plug
