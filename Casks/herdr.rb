@@ -17,9 +17,7 @@ cask "herdr" do
 
   binary "herdr-macos-#{arch}", target: "herdr"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{staged_path}/herdr-macos-#{arch}"],
-                   sudo: false
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/herdr-macos-#{arch}"]
   end
 end

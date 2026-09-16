@@ -16,10 +16,8 @@ cask "spark-plug" do
 
   app "Spark Plug.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Spark Plug.app"],
-                   sudo: false
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Spark Plug.app"]
   end
 
   zap trash: "~/Library/Preferences/co.uk.kylescudder.spark-plug.plist"

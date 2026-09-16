@@ -16,10 +16,8 @@ cask "balm" do
 
   app "Balm.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Balm.app"],
-                   sudo: false
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Balm.app"]
   end
 
   zap trash: "~/Library/Preferences/app.balm.plist"
