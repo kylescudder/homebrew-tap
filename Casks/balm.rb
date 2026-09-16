@@ -1,6 +1,6 @@
 cask "balm" do
-  version "0.10.0"
-  sha256 "f247ef7a92b1b208de826e857711db02e23a53c500b5ba357e6ccb72ee846d94"
+  version "0.11.0"
+  sha256 "4904f1cea0d4b4f57bd77d4e1cda7934593e2f21f6a3ec059499297b8058ca47"
 
   url "https://github.com/kylescudder/balm/releases/download/v#{version}/Balm-#{version}-macos.zip"
   name "Balm"
